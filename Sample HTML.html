@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Category Fast Add</title>
+
+<!--QA
+<link rel="stylesheet" type="text/css" href="https://pg.quickbase.com/db/bivihyvqi?a=dbpage&pageID=45">
+<script type="text/javascript" src="https://pg.quickbase.com/db/bivihyvqi?a=dbpage&pageID=25"></script>
+-->
+
+<!--Prod
+<link rel="stylesheet" type="text/css" href="https://pg.quickbase.com/db/biichqst5?a=dbpage&pageID=40">
+<script type="text/javascript" src="https://pg.quickbase.com/db/biichqst5?a=dbpage&pageID=56"></script>
+-->
+
+<!--Roy Local-->
+<link rel="stylesheet" type="text/css" href="HLFastAdd_v3.css">
+<script type="text/javascript" src="HLFastAdd_v3.js"></script>
+
+<!--Local
+<link rel="stylesheet" type="text/css" href="https://pg.quickbase.com/db/bivihyvqi?a=dbpage&pageID=45">
+<script type="text/javascript" src="https://pg.quickbase.com/db/bivihyvqi?a=dbpage&pageID=25"></script>
+-->
+
+</head>
+
+<body onload=''>
+
+<div class='titlefield'>
+Category Fast Add
+</div>
+
+<!--QA
+<div class='informationfield'> Kindly copy the data using the format in the Forecast Modification data template in either of the files below : <br />
+	<a href="https://pg.quickbase.com/up/bivihywjk/g/ri/eh/va/High%20Level%20Weekly%20Input%20Template.xlsx"> Weekly Data Template </a> &nbsp;&nbsp;
+	<a href="https://pg.quickbase.com/up/bivihywjk/g/rj/eh/va/High%20Level%20Monthly%20Input%20Template.xlsx"> Monthly Data Template </a>
+</div>
+-->
+<!-- Prod-->
+<div class='informationfield'> Kindly copy the data using the format in the Forecast Modification data template in either of the files below : <br />
+	<a href="https://pg.quickbase.com/up/bikhtw643/g/rt/eh/va/High%20Level%20Weekly%20Input%20Template%20V3.xlsx"> Weekly Data Template </a> &nbsp;&nbsp;
+	<a href="https://pg.quickbase.com/up/bikhtw643/g/rs/eh/va/High%20Level%20Monthly%20Input%20Template%20V3.xlsx"> Monthly Data Template </a>
+</div>
+
+
+<div class = 'textarea'>
+<textarea id='Details' class="inputfield" cols=98 rows=12 wrap='off'></textarea>
+</div>
+
+<div class='mainControl'>
+<table class='formatfield'>
+				<tr>
+					<td>
+						Input Format : 
+					</td>
+					<td>
+						<input type="radio" name="format" id="USformat" value="US" checked="true" onclick = "toggleFormat()"> US
+					</td>
+					<td>
+						<input type="radio" name="format" id="EURformat" value="EUR" onclick = "toggleFormat()"> EUR
+					</td>
+					<td>
+						&nbsp;
+					</td>
+					<td id = 'inputdesc'>
+						( Commas are ignored. Period is used as decimal point:  <i>9 , 999 , 999 . 99<i> )
+					</td>
+				</tr>
+</table>
+</div>
+
+
+<div>
+			<table id="controls">
+			<tr>
+				<td>
+					<div class="controlBtn" id='submission' type=button onclick='getExcelData()'>  CREATE HIGH LEVEL FORECAST MODIFICATIONS </div>
+				</td>	
+			</tr>
+		</table>
+</div>
+
+<div>
+			<table id="controls">
+			<tr>
+				<td>
+					<div class="controlBtn" id='log' type=button onclick='Logging()'>  DEBUG </div>
+				</td>	
+			</tr>
+		</table>
+</div>
+
+</body>
+</html>
